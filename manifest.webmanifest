@@ -1,0 +1,17 @@
+{
+  "name": "Ravi & Divya Wedding Invitation",
+  "short_name": "Ravi & Divya",
+  "description": "Wedding invitation and celebrations for Ravi and Divya.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7f1e5",
+  "theme_color": "#174d46",
+  "icons": [
+    {
+      "src": "assets/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
