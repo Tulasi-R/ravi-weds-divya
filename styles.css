@@ -1746,3 +1746,195 @@ select {
     display: none;
   }
 }
+
+.promise-card {
+            background-color: var(--card-bg);
+            width: 100%;
+            max-width: 420px;
+            padding: 28px;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(59, 47, 47, 0.08);
+            border: 1px solid #e6dfd3;
+            position: relative;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        /* Decorative Inner Border Frame */
+        .promise-card::before {
+            content: "";
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            right: 12px;
+            bottom: 12px;
+            border: 1px solid var(--border-gold);
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .image-container {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border-radius: 2px;
+            border: 1px solid #e3dec9;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .step-number {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .step-title-wrapper {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #887e75;
+            margin-bottom: 4px;
+        }
+
+        .promise-card h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin: 0 0 16px 0;
+            font-weight: normal;
+            line-height: 1.3;
+        }
+
+        .promise-card h2 span {
+            display: block;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            margin-top: 4px;
+        }
+
+        .promise-card p {
+            font-size: 0.92rem;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0 0 20px 0;
+            padding: 0 10px;
+        }
+
+        .card-divider {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+        @media (min-width: 768px) {
+            .promises-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+                gap: 30px;
+                max-width: 1100px;
+            }
+            .header-container h1 {
+                font-size: 2.2rem;
+            }
+            .promise-card {
+                padding: 24px;
+            }
+        }
+        :root {
+            --bg-color: #f7f4ef;
+            --primary-color: #3b2f2f;
+            --accent-color: #9c7b53;
+            --text-color: #554e4a;
+            --border-gold: #d4af37;
+        }
+        promise-section {
+         
+            padding: 60px 20px;
+            font-family: 'Georgia', serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /* Loading Screen Styles */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fcf9f2; /* Matches the wedding theme background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.loader-content {
+    text-align: center;
+    padding: 20px;
+    color: #4a3b32;
+    font-family: 'Georgia', serif;
+}
+
+.loader-symbol {
+    font-size: 2.5rem;
+    color: #c59b27;
+    margin-bottom: 10px;
+}
+
+.loader-telugu {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: #332211;
+}
+
+.loader-divider {
+    color: #c59b27;
+    font-size: 1rem;
+    margin: 8px 0;
+}
+
+.loader-sub {
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #7a6b5d;
+    margin: 0 0 20px 0;
+}
+
+/* Subtle spinner */
+.loader-spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(197, 155, 39, 0.2);
+    border-top: 3px solid #c59b27;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Class added via JS to hide the loader */
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
