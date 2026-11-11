@@ -127,3 +127,11 @@ backToTop?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "
 if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
   window.addEventListener("load", () => navigator.serviceWorker.register("./service-worker.js").catch(() => { }));
 }
+window.addEventListener('load', function() {
+    const loadingScreen = document.getElementById('loading-screen');
+    
+    // Optional: add a tiny delay (e.g., 500ms) to make the transition smooth
+    setTimeout(() => {
+        loadingScreen.classList.add('loader-hidden');
+    }, 500);
+});
